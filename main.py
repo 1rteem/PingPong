@@ -39,6 +39,7 @@ class Player(GameSprite):
 
 racket1 = Player('racket.png', 5,10, 50, 100, 3)
 racket2 = Player('racket.png', 640, 10, 50, 100, 3)   
+ball = GameSprite('tenis_ball.png', 250, 250, 50, 50, 3)   
 
 
 finish = False
@@ -51,6 +52,7 @@ while run:
         
     if finish != True:    
         window.fill((200,255,255))
+        ball.reset()
         racket1.reset()
         racket2.reset()
         racket1.update_l()
